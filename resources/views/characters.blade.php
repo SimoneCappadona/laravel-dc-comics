@@ -7,5 +7,5 @@
 @endsection
 
 @section('link')
-@include('./partials/ink')
+@include('partials.link')
 @endsection
