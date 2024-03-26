@@ -2,15 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comics;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function comics()
     {
-        $comics = config('comics');
+        $comic = config('comics');
 
         return view('comics', compact('comics'));
+    }
+
+    public function show(Comics $comics)
+    {
+        return view('comics.show', compact('comics'));
     }
 
     public function characters()
